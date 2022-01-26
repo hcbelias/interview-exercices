@@ -1,4 +1,4 @@
-export function checkTriplet(arr, n) {
+export default function checkTriplet(arr, n) {
   const squareMapperResult = {}
   for (let i = 0; i < n; i++) {
     const squareValue = Math.pow(arr[i], 2)
