@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "lint": "eslint ./ --fix",
-    "lint:ci": "eslint ./",
+    "lint": "node_modules/.bin/eslint ./ --fix",
+    "lint:ci": "node_modules/.bin/eslint ./",
     "prettier": "npx prettier --write .",
     "prettier:ci": "npx prettier ."
   },
