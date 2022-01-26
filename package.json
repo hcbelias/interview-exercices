@@ -6,7 +6,9 @@
   "scripts": {
     "test": "jest",
     "lint": "node_modules/.bin/eslint ./ --fix",
-    "prettier": "npx prettier --write ."
+    "lint:ci": "node_modules/.bin/eslint ./",
+    "prettier": "npx prettier --write .",
+    "prettier:ci": "npx prettier ."
   },
   "author": "",
   "license": "ISC",
