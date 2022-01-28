@@ -1,7 +1,7 @@
 {
   "name": "interview-exercices",
   "version": "1.0.0",
-  "description": "",
+  "description": "Project created by Henrique Elias to study algorithms using JS.",
   "main": "index.js",
   "scripts": {
     "test": "jest",
@@ -10,7 +10,7 @@
     "prettier": "npx prettier --write .",
     "prettier:ci": "npx prettier ."
   },
-  "author": "",
+  "author": "Henrique Elias",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.16.12",
