@@ -1,8 +1,5 @@
 
 export default function checkTriplet(arr, n) {
-  if (n < 3) {
-    return false
-  }
   // creating a sorted array with squared values
   const squareResults = arr.map(item => Math.pow(item, 2)).sort((a, b) => a - b)
 
