@@ -1,4 +1,9 @@
 
+/**
+ * @param {array} arr array of n integers
+ * @param {int} n number of elements in array
+ * @return {boolean} Result indicating if a valid triplet was found
+*/
 export default function checkTriplet(arr, n) {
   // creating a sorted array with squared values
   const squareResults = arr.map(item => Math.pow(item, 2)).sort((a, b) => a - b)
