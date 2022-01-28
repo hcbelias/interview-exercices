@@ -30,3 +30,6 @@ Expected Auxiliary Space: O(max(Arr[i]))
 Constraints:
 1 <= N <= 107
 1 <= Arr[i] <= 1000
+
+
+### Ref - https://practice.geeksforgeeks.org/problems/pythagorean-triplet3018
