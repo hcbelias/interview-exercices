@@ -36,7 +36,7 @@ npm run prettier
 
 ## Exercices
 
-* [Pythagorean-triplet] pythagorean-triplet
+* [Pythagorean-triplet](pythagorean-triplet#)
 
 
 2022 @ By Henrique Elias
