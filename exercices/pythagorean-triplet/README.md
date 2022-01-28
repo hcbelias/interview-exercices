@@ -32,4 +32,4 @@ Constraints:
 1 <= Arr[i] <= 1000
 
 
-### Ref - https://practice.geeksforgeeks.org/problems/pythagorean-triplet3018
+### Ref - https://practice.geeksforgeeks.org/problems/pythagorean-triplet3018/1
