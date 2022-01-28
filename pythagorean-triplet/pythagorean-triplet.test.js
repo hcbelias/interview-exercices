@@ -9,7 +9,7 @@ describe('pythagorean-triplet', () => {
   it('Should [3, 8, 5] expect to return false', () => {
     expect(checkTriplet([3, 8, 5], 3)).toBe(false)
   })
-  it.only('TestCaseOne has a pythagorean triplet', () => {
+  it('TestCaseOne has a pythagorean triplet', () => {
     expect(checkTriplet(TestCaseOne.arr, TestCaseOne.n)).toBe(true)
   })
 })

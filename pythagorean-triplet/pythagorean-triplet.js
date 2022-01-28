@@ -8,7 +8,7 @@ export default function checkTriplet(arr, n) {
 
   // Considering a > b > c
   let a = squareResults.length - 1 // a from pythagorean triplet formula, starting from last array element
-  const hypotenuseSquareValue = Math.pow(arr[a], 2)
+  let hypotenuseSquareValue = Math.pow(arr[a], 2)
   /***************
         [1, 4, 9, 16, 25, 36, 49, 64, 81]
         ^              ^               ^
@@ -20,8 +20,8 @@ export default function checkTriplet(arr, n) {
 
   // we need to check while a is in third position in array
   while (a > 1) {
-    const leftSideValue = Math.pow(arr[leftIndex], 2)
-    const rightSideValue = Math.pow(arr[rightIndex], 2)
+    const leftSideValue = squareResults[leftIndex]
+    const rightSideValue = squareResults[rightIndex]
     const sideSquareSumValue = leftSideValue + rightSideValue
     if (sideSquareSumValue < hypotenuseSquareValue) {
       leftIndex++
@@ -35,6 +35,7 @@ export default function checkTriplet(arr, n) {
     // Indexes matches without finding candidate, we should look for another hypotenuse value
     if (leftIndex === rightIndex) {
       a--
+      hypotenuseSquareValue = squareResults[a]
       leftIndex = 0
       rightIndex = a - 1
     }
