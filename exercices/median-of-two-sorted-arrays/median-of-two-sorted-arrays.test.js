@@ -17,4 +17,12 @@ describe('median-of-two-sorted-arrays', () => {
 
     expect(result).toStrictEqual(expected)
   })
+  it('Should_Return 1_When_Passing [] as nums1 and [1] as nums2', () => {
+    const nums1 = []
+    const nums2 = [1]
+    const expected = 1
+    const result = findMedianSortedArrays(nums1, nums2)
+
+    expect(result).toStrictEqual(expected)
+  })
 })
