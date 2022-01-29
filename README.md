@@ -38,7 +38,7 @@ npm run prettier
 
 * [Pythagorean-triplet](exercices/pythagorean-triplet#)
 * [Add-two-numbers](exercices/add-two-numbers#)
-* [Longest-substring-without-repeating-characteres](exercices/longest-substring-without-repeating-characteres#)
+* [Longest-substring-without-repeating-characteres](exercices/longest-substring-without-repeating-characters#)
 
 
 2022 @ By Henrique Elias
