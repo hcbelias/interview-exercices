@@ -31,36 +31,24 @@ export function buildLinkNodeList(array) {
  */
 export default function addTwoNumbers(l1, l2) {
   const nodeListResult = new ListNode(0, null)
-  let carryIterator = 0
-  let nextSumIterator = 0
-  let currentListNode = nodeListResult
-  let previousListNode = null
+  let currentNode = nodeListResult
+  let carry = 0
   const createNextListNode = (val) =>
     typeof val === 'undefined' ? null : new ListNode(val, null)
-  while (l1.next || l2.next) {
-    const valuesSum = l1.val + l2.val + (currentListNode?.val || 0)
-    carryIterator = valuesSum % 10
-    nextSumIterator = Math.floor(valuesSum / 10)
+  while (l1 || l2) {
+    const sum = (l1?.val || 0) + (l2?.val || 0) + carry
+    carry = Math.floor(sum / 10)
+    currentNode.setNext(createNextListNode(sum % 10))
+    currentNode = currentNode.next
 
-    if (currentListNode) {
-      currentListNode.setVal(carryIterator)
-    } else {
-      currentListNode = createNextListNode(carryIterator)
-    }
-
-    if (previousListNode) {
-      previousListNode.setNext(currentListNode)
-    }
-    if (nextSumIterator) {
-      currentListNode.setNext(createNextListNode(nextSumIterator))
-    }
-
-    previousListNode = currentListNode
-    currentListNode = currentListNode.next
     l1 = l1?.next
     l2 = l2?.next
   }
 
+  if (carry > 0) {
+    currentNode.next = createNextListNode(carry)
+  }
 
-  return nodeListResult
+  // as we are using dummy head, we return next
+  return nodeListResult.next || createNextListNode(0)
 }
