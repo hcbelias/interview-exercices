@@ -30,31 +30,37 @@ export function buildLinkNodeList(array) {
  * @return {ListNode} Result from the sum between two number in ListNode structure
  */
 export default function addTwoNumbers(l1, l2) {
-  let nodeListResult = null
+  const nodeListResult = new ListNode(0, null)
   let carryIterator = 0
   let nextSumIterator = 0
-
-  const createNextListNode = sum => nextSumIterator ? new ListNode(nextSumIterator, null) : null
+  let currentListNode = nodeListResult
+  let previousListNode = null
+  const createNextListNode = (val) =>
+    typeof val === 'undefined' ? null : new ListNode(val, null)
   while (l1.next || l2.next) {
-    const valuesSum = l1.val + l2.val
+    const valuesSum = l1.val + l2.val + (currentListNode?.val || 0)
     carryIterator = valuesSum % 10
-    nextSumIterator = valuesSum / 10
+    nextSumIterator = Math.floor(valuesSum / 10)
 
-    if(nodeListResult){
-      if(nodeListResult.next){
-
-      }else{
-        nodeListResult.next 
-      }
-
-    }else{
-      nodeListResult = new ListNode(carryIterator, createNextListNode(nextSumIterator))
+    if (currentListNode) {
+      currentListNode.setVal(carryIterator)
+    } else {
+      currentListNode = createNextListNode(carryIterator)
     }
 
+    if (previousListNode) {
+      previousListNode.setNext(currentListNode)
+    }
+    if (nextSumIterator) {
+      currentListNode.setNext(createNextListNode(nextSumIterator))
+    }
 
-    l1 = l1.next
-    l2 = l2.next
+    previousListNode = currentListNode
+    currentListNode = currentListNode.next
+    l1 = l1?.next
+    l2 = l2?.next
   }
+
 
   return nodeListResult
 }
