@@ -3,7 +3,7 @@
  * @param {string} s - string consists of English letters, digits, symbols and spaces.
  */
 export default function lengthOfLongestSubstring(s) {
-  let hashMap = {}
+  const hashMap = {}
   let foundConflict = false
   let maxLength = 0
   let currentLength = 0
@@ -15,8 +15,8 @@ export default function lengthOfLongestSubstring(s) {
       if (currentLength > maxLength) {
         maxLength = currentLength
       }
-      hashMap = {}
-      currentLength = 1
+
+      currentLength = i - hashMap[char]
     } else {
       currentLength++
     }

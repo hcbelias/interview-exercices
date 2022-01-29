@@ -50,4 +50,11 @@ describe('longest-substring-without-repeating-characteres', () => {
 
     expect(result).toStrictEqual(expected)
   })
+  it.only('Should_Return 2_When_Passing "abba" as s', () => {
+    const s = 'abba'
+    const result = lengthOfLongestSubstring(s)
+    const expected = 2
+
+    expect(result).toStrictEqual(expected)
+  })
 })
