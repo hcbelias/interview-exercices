@@ -38,3 +38,5 @@ You don't need to read input or print anything. You only need to complete the fu
 ### Constraints
 * 1 <= n, m <= 5*104
 * 0 <= arr1i, arr2i <= 107
+
+### Ref - https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays-1587115620/1
