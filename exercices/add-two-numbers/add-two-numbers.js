@@ -17,7 +17,7 @@ export function buildLinkNodeList(array) {
   for (let i = 0; i < nodeListArray.length - 1; i++) {
     const iterator = nodeListArray[i]
 
-    iterator.setNext(nodeListArray[i + 1])
+    iterator.next = nodeListArray[i + 1]
   }
 
   return nodeListArray.length ? nodeListArray[0] : null
@@ -38,7 +38,7 @@ export default function addTwoNumbers(l1, l2) {
   while (l1 || l2) {
     const sum = (l1?.val || 0) + (l2?.val || 0) + carry
     carry = Math.floor(sum / 10)
-    currentNode.setNext(createNextListNode(sum % 10))
+    currentNode.next = createNextListNode(sum % 10)
     currentNode = currentNode.next
 
     l1 = l1?.next

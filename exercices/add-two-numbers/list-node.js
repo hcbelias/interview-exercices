@@ -9,12 +9,4 @@ export default class ListNode {
     this.val = val === undefined ? 0 : val
     this.next = next === undefined ? null : next
   }
-
-  setNext(next) {
-    this.next = next
-  }
-
-  setVal(val) {
-    this.val = val
-  }
 }
