@@ -57,4 +57,11 @@ describe('longest-substring-without-repeating-characteres', () => {
 
     expect(result).toBe(expected)
   })
+  it('Should_Return 6_When_Passing "wobgrovw" as s', () => {
+    const s = 'wobgrovw'
+    const result = lengthOfLongestSubstring(s)
+    const expected = 6
+
+    expect(result).toBe(expected)
+  })
 })
