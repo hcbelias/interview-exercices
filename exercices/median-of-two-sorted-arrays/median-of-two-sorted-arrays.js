@@ -1,0 +1,1 @@
+export default function findMedianSortedArrays(nums1, nums2) {}

@@ -39,6 +39,7 @@ npm run prettier
 * [Pythagorean-triplet](exercices/pythagorean-triplet#)
 * [Add-two-numbers](exercices/add-two-numbers#)
 * [Longest-substring-without-repeating-characteres](exercices/longest-substring-without-repeating-characters#)
+* [Median-of-two-sorted-arrays](exercices/median-of-two-sorted-arrays#)
 
 
 2022 @ By Henrique Elias
