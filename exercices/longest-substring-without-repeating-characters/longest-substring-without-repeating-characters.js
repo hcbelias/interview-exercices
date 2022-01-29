@@ -12,7 +12,7 @@ export default function lengthOfLongestSubstring(s) {
 
     substring.push(char)
     if (typeof hashMap[char] !== 'undefined') {
-      const removedSubstring = substring.splice(0, hashMap[char] + 1)
+      const removedSubstring = substring.splice(0, substring.indexOf(char) + 1)
       for (let j = 0; j < removedSubstring.length; j++) {
         const iterator = removedSubstring[j]
         delete hashMap[iterator]
