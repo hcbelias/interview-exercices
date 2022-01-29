@@ -4,24 +4,24 @@
  * @return {number} length of the longest substring
  */
 export default function lengthOfLongestSubstring(s) {
-  let hashMap = {}
+  const hashMap = {}
+  const substring = []
   let maxLength = 0
-  let currentLength = 0
   for (let i = 0; i < s.length; i++) {
     const char = s.charAt(i)
 
+    substring.push(char)
     if (typeof hashMap[char] !== 'undefined') {
-      currentLength = i - hashMap[char]
-      // if conflict is the previous letter, we need to reset the whole counter
-      if (hashMap[char] === i - 1) {
-        hashMap = {}
+      const removedSubstring = substring.splice(0, hashMap[char] + 1)
+      for (let j = 0; j < removedSubstring.length; j++) {
+        const iterator = removedSubstring[j]
+        delete hashMap[iterator]
       }
-    } else {
-      currentLength++
     }
-    if (currentLength > maxLength) {
-      maxLength = currentLength
+    if (substring.length > maxLength) {
+      maxLength = substring.length
     }
+
     hashMap[char] = i
   }
 
