@@ -1,5 +1,6 @@
 
 /**
+ * Given an array arr of N integers, returns true if there is a triplet (a, b, c) that satisfies a2 + b2 = c2, otherwise false.
  * @param {array} arr array of n integers
  * @param {int} n number of elements in array
  * @return {boolean} Result indicating if a valid triplet was found
