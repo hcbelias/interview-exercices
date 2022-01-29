@@ -22,4 +22,25 @@ describe('longest-substring-without-repeating-characteres', () => {
 
     expect(result).toStrictEqual(expected)
   })
+  it('Should_Return 1_When_Passing " " as s', () => {
+    const s = ' '
+    const result = lengthOfLongestSubstring(s)
+    const expected = 1
+
+    expect(result).toStrictEqual(expected)
+  })
+  it('Should_Return 2_When_Passing "au" as s', () => {
+    const s = 'au'
+    const result = lengthOfLongestSubstring(s)
+    const expected = 2
+
+    expect(result).toStrictEqual(expected)
+  })
+  it('Should_Return 2_When_Passing "aab" as s', () => {
+    const s = 'aab'
+    const result = lengthOfLongestSubstring(s)
+    const expected = 2
+
+    expect(result).toStrictEqual(expected)
+  })
 })

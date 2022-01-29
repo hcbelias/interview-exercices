@@ -4,18 +4,22 @@
  */
 export default function lengthOfLongestSubstring(s) {
   const hashMap = {}
-  const charArray = s.split('')
+  let foundConflict = false
   let maxLength = 0
 
-  charArray.forEach((char, index) => {
+  for (let i = 0; i < s.length; i++) {
+    const char = s.charAt(i)
+
     if (typeof hashMap[char] !== 'undefined') {
-      const length = index - hashMap[char]
+      const length = i - hashMap[char]
+      foundConflict = true
       if (length > maxLength) {
         maxLength = length
       }
+    } else {
+      maxLength++
     }
-    hashMap[char] = index
-  })
-
-  return maxLength
+    hashMap[char] = i
+  }
+  return foundConflict ? maxLength : s.length
 }
