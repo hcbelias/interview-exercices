@@ -43,4 +43,11 @@ describe('longest-substring-without-repeating-characteres', () => {
 
     expect(result).toStrictEqual(expected)
   })
+  it('Should_Return 3_When_Passing "dvdf" as s', () => {
+    const s = 'dvdf'
+    const result = lengthOfLongestSubstring(s)
+    const expected = 3
+
+    expect(result).toStrictEqual(expected)
+  })
 })
